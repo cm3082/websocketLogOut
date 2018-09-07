@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>My WebSocket</title>
+</head>
+
+<body>
+	登录
+	<br /> 用户名:
+	<input id="username" type="text" />
+	<br /> 密码:
+	<input id="password" type="text" />
+	<br />
+	<button onclick="login()">登录</button>
+</body>
+
+<script type="text/javascript" src="static/js/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+	function login(){
+		var username = $("#username").val();
+		var password = $("#password").val();
+		$.ajax({ 
+			 type: "GET",
+			 url: "log",
+			 data: {
+				 username: username,
+				 password: password
+				 }, 
+			 success: function(res){
+				
+				window.location.href = "myTest";
+		
+			}
+		})
+	}
+</script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>My WebSocket</title>
+<script type="text/javascript" src="static/js/jquery-1.8.3.js"></script>
+<script src="static/js/layer/layer.js" type="text/javascript"></script>
+<script src="static/js/websocket.js" type="text/javascript"></script>
+</head>
+
+<body>
+	Welcome2
+	<br />
+	<input id="text" type="text" />
+	<button onclick="send()">Send</button>
+	<button onclick="closeWebSocket()">Close</button>
+	<div id="message"></div>
+</body>
+
+<script type="text/javascript">
+/* 
+	var host = window.location.host;
+
+	var websocket = null;
+
+	if ('WebSocket' in window) {
+		websocket = new WebSocket("ws://"+host+"/websocket");
+	} else {
+		alert('Not support websocket')
+	}
+
+	websocket.onerror = function() {
+		setMessageInnerHTML("error");
+	};
+
+	websocket.onopen = function(event) {
+		setMessageInnerHTML("open");
+	}
+
+	websocket.onmessage = function(event) {
+		//setMessageInnerHTML(event.data);
+		var str = event.data;
+		if(str.indexOf("3") != -1 )
+		 layer.msg(str,{
+			 btn: ['明白了']
+		 }, function(){
+			  window.location.href = 'login'
+		 });
+	}
+
+	websocket.onclose = function() {
+		setMessageInnerHTML("close");
+	}
+
+	window.onbeforeunload = function() {
+		websocket.close();
+	}
+
+	function setMessageInnerHTML(innerHTML) {
+		document.getElementById('message').innerHTML += innerHTML + '<br/>';
+	}
+
+	function closeWebSocket() {
+		websocket.close();
+	}
+
+	function send() {
+		var message = document.getElementById('text').value;
+		websocket.send(message);
+	} */
+</script>
+</html>
